@@ -85,3 +85,11 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+
+footer a{
+  text-decoration: none;
+  color: #b98d8dab;
+  position: relative;
+  top: 30px;
+  font-size: 10px;
+}
