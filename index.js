@@ -123,6 +123,7 @@ function check(level){
 
 //to enable click on color buttons
 function enableClick(){
+  $(".btn").off("click");
   $(".btn").click(function(event){
     pressed(event.target);
     userColor.push($(event.target).attr("id")); //push clicked button color
@@ -144,6 +145,7 @@ function enableClick(){
 
 //key press for starting game
 function beginGame(){
+  $(document).off("keypress"); //offing such that no muliple event listener get attached
   $(document).keypress(function(){
     $(document).off("keypress"); //disabling keypress during game
     setTimeout(
@@ -158,6 +160,7 @@ function beginGame(){
 
 //enable start button to re'start game
 function enableStartButton(){
+  $("button").off("click");
   $("button").click(function(){
     reset();
 
